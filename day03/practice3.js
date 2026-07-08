@@ -86,4 +86,4 @@
 // 힌트: 배열의 마지막 요소 인덱스는 배열.length - 1 입니다.
 
 let waitingList = ['김민준', '이서연', '박도윤', '최지우']
-console.log(waitingList.length -1)
+console.log(`마지막 대기자는 [${waitingList[(waitingList.length)-1]}] 입니다.`)
