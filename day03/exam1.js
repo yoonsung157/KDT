@@ -146,12 +146,15 @@ console.log( 10 + "" )
 // let sum = score1 + score2
 // let result = sum >= 150 ? '합격' : '불합격'
 
-// document.write(`<h3>${result}</h3>`)..
+// document.querySelector("h3").innerHTML = `${result}`
 
 
 // [지문9] 두 사람의 이름을 prompt함수로 각 입력받아서 만일 이름이 '유재석' 이면 뒤에 (방장) 이라고 이름 뒤에 붙이고 아니면 생략한다.  HTML의 <ol> 에 결과를 출력하시오.
 let name1 = prompt("이름")
 let name2 = prompt('이름')
-let result1 = name1 == '유재석' ? '${name1}(방장)' : name1
+let result1 = name1 == '유재석' ? `${name1}(방장)` : name1
+let result2 = name2 == '유재석' ? `${name2}(방장)` : name2
 console.log(result1)
+
+document.querySelector("ol").innerHTML = `<li> ${result1} </li> <li> ${result2} </li> `
 
