@@ -114,7 +114,7 @@ else if(A[2]=="X" && A[4]=="X" && A[6]=="X"){win = 2}
 if (win == 1) {console.log("선공 승리")}
 else if (win == 2) {console.log("후공 승리")}
 else{
-    if( turn % 2 == 0) {tictac = "O"}
+    if( turn %2  == 0) {tictac = "O"}
     else {tictac = "X"}
     user = prompt('좌표입력')
     if(A[user-1] == "O" || A[user-1] == "X"){
