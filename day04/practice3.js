@@ -90,15 +90,15 @@
 
 // if ( a > b ) {
 //     if ( a > c ) {
-//         b > c ? console.log(`${a},${b},${c}`) : console.log(`${a},${c},${b}`)
+//         b > c ? console.log(`${c},${b},${a}`) : console.log(`${b},${c},${a}`)
 //     }
-//     else console.log(`${c}, ${a}, ${b}`) //c>a>b
+//     else console.log(`${b}, ${a}, ${c}`) //c>a>b
 // }
 // else {
 //     if ( b > c) {
-//         a > c ? console.log(`${b}, ${a}, ${c}`) : console.log(`${b},${c},${a}`)
+//         a > c ? console.log(`${c}, ${a}, ${b}`) : console.log(`${a},${c},${b}`)
 //     }
-//     else console.log(`${c}, ${b}, ${a}`)
+//     else console.log(`${a}, ${b}, ${c}`)
 // }
 
 // 문제 8: 가위바위보 게임
@@ -123,8 +123,10 @@
 //     else if ( player1 == 1 && player2 == 0) console.log('player1승리')
 //     else if ( player1 == 1 && player2 == 2) console.log('player2승리')
 //     else if ( player1 == 2 && player2 == 0) console.log('player2승리')
-//     else console.log('player1승리')
+//     else if ( player1 == 2 && player2 == 1) console.log('player1승리')
 // }
+
+
 
 
 // 문제 9: 주차 차량 위치 검색
@@ -148,12 +150,13 @@
 // 사용자로부터 제외하고 싶은 과목명을 입력받아, courseList에 해당 과목이 존재하면 목록에서 삭제한 뒤 변경된 배열 전체를 출력하세요. 만약
 // 존재하지 않는 과목이면 '해당 과목은 신청 목록에 없습니다.'를 출력하는 프로그램을 작성하시오.
 
-let courseList = ['수학', '영어', '과학', '국어']
+// let courseList = ['수학', '영어', '과학', '국어']
 
-let sub = prompt('과목 입력')
+// let sub = prompt('과목 입력')
 
-if( courseList.includes(sub) ) {
-    courseList.splice(courseList.indexOf(sub),1)
-    console.log(courseList)
-}
-else console.log('해당 과목은 신청 목록에 없습니다.') 
+// if( courseList.includes(sub) {
+//     courseList.splice(courseList.indexOf(sub),1)
+//     console.log(courseList)
+// }
+// else console.log('해당 과목은 신청 목록에 없습니다.') 
+
