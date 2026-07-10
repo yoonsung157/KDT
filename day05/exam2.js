@@ -110,18 +110,14 @@ for( let 반복수 = 1; 반복수 <= 5; 반복수++) {
 // console.log(result/5)
 
 
-/* 문제 7: 특정 조건에서 반복문 탈출하기 (breacircle)
+/* 문제 7: 특정 조건에서 반복문 탈출하기 (break)
 점수 배열에서 100점 만점자가 처음 나타나면, 그 학생의 점수를 출력하고 반복문을 즉시 종료하는 프로그램을 작성하시오.
 let scores = [77, 82, 100, 54, 96];
 출력 예시: 100점 만점자를 찾았습니다!*/
 
 // let scores = [77, 82, 100, 54, 96]
 // for(let i = 0; i < 5; i++){
-//     if( scores[i] != 100 ) console.log(scores[i])
-//     else {
-//         console.log(scores[i])
-//         breacircle;
-//     }
+//     if( scores[i] == 100 ) {console.log('100점 만점자를 찾았습니다!'); break;}
 // }
 
 /*문제 8: 특정 조건 건너뛰기 (continue)
