@@ -165,12 +165,12 @@ let scores = [92, 86, 72]
 let circle = ['','','']
 let html = ''
 for(let i = 0; i < 3; i++){
-    let k = ( scores[i] - (scores[i] % 10) ) / 10
-    for( let j = 0; j < 10 ; j++ ){
+    let k = ( scores[i] / 10 )
+    for( let j = 1; j <= 10 ; j++ ){
         if( j < k ) { circle[i] += '●'}
         else { circle[i] += '○' }
     }
     html += `<p> ${ nameArray[i] } ${ circle[i] } </p>`
-    document.querySelector("p").innerHTML = html
 }
+document.querySelector("p").innerHTML = html
 
