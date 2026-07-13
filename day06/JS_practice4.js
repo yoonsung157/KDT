@@ -212,6 +212,7 @@ for(let i = 0; i < 4; i++){
     let min = usageMinutes[carNumbers.indexOf(carNumbers[i])]
     let price = parseInt( (min - 30) / 10 ) * 500 + 1000
     if(price > 20000) price = 20000
+    if(price < 1000) price = 1000
     html += `${carNumbers[i]} : ${usageMinutes[i]} 분 주차, 최종요금 : ${price}원 <br/>`
 }
 document.querySelector("p").innerHTML = html
