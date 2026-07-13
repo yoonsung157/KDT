@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <link rel='stylesheet' href='main.css'> <!-- CSS -->
+
+    <!-- css 방법2 -->
+    <style>
+        h4{ color: blue; }
+    </style>
+
+    <!-- css 방법3 -->
+     <link href="exam1.css" rel="stylesheet">
+</head>
+<body>
+    <!--
+        HTML : 이동가능한 텍스트 마크업 언어                                ex) 뼈대
+        CSS : Cascading( 위에서 아래로 흐름 ) Style( 꾸미기 ) Sheets(덮는)  ex) 옷
+            -> 위에서 아래로 (HTML) 꾸미기 시트 덮는다.
+        JS :  자바스크립트 프로그래밍 언어                                  ex) 동적(이벤트) 
+    -->
+    <!-- CSS 적용하는 방법1: 인라인( 마크업내 style 속성 이용 )-->
+     <h3 style="color: red;"> CSS 방법1</h3> <!-- h3 마크업 -->
+     <!-- CSS 적용하는 벙법2: <head> 마크업 내 <style> 마크업 문법 -->
+    <h4> CSS 방법2 </h4>
+
+    <!-- CSS 적용하는 방법3 : .css 파일내 css문법 작성하고 <head> 마크업에서 호출 -->
+    <h5> CSS 방법3 </h5>
+
+    <h6> CSS 선택자 </h6>
+    <h6 class = "구역1"> CSS 선택자 </h6>
+    <h6 id = "구역2" > CSS 선택자 </h6>
+</body>
+</html>
