@@ -34,12 +34,31 @@ console.log('prop1' in 객체변수3) //true
 // [10] 객체
 
 
-const students = [ 
-    { 이름 : '김철수' , 학번 : '20265465' , 학과 : '컴퓨터공학과' , 교과목정보 : ['컴공1','컴공2'], 수강신청내역 : ['수강1', '수강2'] },
-    { 이름 : '이영희' , 학번 : '20264654' , 학과 : '경영학' , 교과목정보 : ['경영1','경영2'] , 수강신청내역 : ['수강3', '수강4'] },
-    { 이름 : '박지성' , 학번 : '20264452' , 학과 : '체육교육과' , 교과목정보 : ['체교1','체교2'], 수강신청내역 : ['수강5', '수강6'] } 
-]
+let students = [{name: '', major: '', students_number: '', grade: ''}, ]
+let subject = [{subject_name: '', major:'', code: '', category: '', grade: '', credit: '', professor: ''}, ] 
+let info_major = [{major: '', Department: '', phone_number: '', captain: '',}, ]
+let history = [{id:'', students_number: '', students_name: '', code: '', subject_name: ''}, ]
 
+
+students.push({name: "박현민", major: "정보통신공학과", students_number: '2021123', year:'4'})
+students.push({name: "최윤성", major: "컴퓨터공학과", students_number: '2021124', year:'4'})
+students.push({name: "정형진", major: "컴퓨터공학과", students_number: '2021125', year:'4'})
+
+subject.push({subject_name: "데이터베이스", code: "12345", major: "컴퓨터공학과", category: "전필", grade: '2', credit: '3', professor: '한경수'})
+subject.push({subject_name: "정보보안", code: "12346", major: "정보통신공학과", category: "전필", grade: '4', credit: '3', professor: '박찬욱'})
+subject.push({subject_name: "자바프로그래밍", code: "12347", major: "컴퓨터공학과", category: "전필", grade: '2', credit: '3', professor: '김현수'})
+
+info_major.push({major: '컴퓨터공학과', Department: '성결관 501호', phone_number: '031-123-456', captain: '요네'})
+info_major.push({major: '정보통신공학과', Department: '성결관 502호', phone_number: '031-123-457', captain: '말파이트'})
+info_major.push({major: '미디어소프트웨어공학과', Department: '성결관 503호', phone_number: '031-123-458', captain: '야스오'})
+
+history.push({id:'1', students_number: students[1].students_number, students_name: students[1].name, code: subject[1].code, subject_name: subject[1].subject_name})
+history.push({id:'2', students_number: students[2].students_number, students_name: students[2].name, code: subject[3].code, subject_name: subject[3].subject_name})
+history.push({id:'3', students_number: students[3].students_number, students_name: students[3].name, code: subject[2].code, subject_name: subject[2].subject_name})
+
+
+
+console.log(history)
 
 
 
