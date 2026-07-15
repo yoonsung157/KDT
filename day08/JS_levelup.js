@@ -24,9 +24,25 @@ let user = [
     { id: 103, name: '정형진'}
 ]
 let item = [
-    { name: '1번구성', price: 5000}
-
-    
+    { name: '1번구성', price: 5000},
+    { name: '2번구성', price: 8000},
+    { name: '3번구성', price: 10000}
 ]
-let list = { end: '2026-07-16'}
+let list = [
+    { end: '2026-07-10'},
+    { end: '2026-07-25'},
+    { end: '2026-08-10'}
+]
+let today = '2026-07-15'
+let html = ''
+html += '<h1 class="a"> 회원구독 상태 대시보드 </h1>'
 
+for(let i = 0; i < user.length; i++){
+    let end = list[i].end > today ? '활성' : '만료'
+    html += `
+    <div class="a"> <h1> ${user[i].name} </h1> 
+    ● 구독 상품 : ${item[i].name} <br>
+    ● 상태 : <span class="${end}">${end}</span>
+    </div>`
+}
+document.querySelector("div").innerHTML = html
