@@ -25,7 +25,7 @@
 .메인{
     margin: 20px;
     background-color: white;
-    width: 560px;
+    width: 559px;
     height: 450px;
     display: flex;
     flex-wrap: wrap;
@@ -35,16 +35,50 @@
     text-align: center;
     border: solid 1px black;
 }
-.사진{
-    width: 184px;
-    height: 120px;
+.사진1{
+    width: 130px;
+    height: 90px;
 }
+.사진2{
+    width: 100px;
+    height: 70px;
+    padding-top: 20px;
+}
+.사진3{
+    width: 110px;
+    height: 85px;
+    padding-top: 5px;
+}
+
+.사진4{
+    width: 120px;
+    height: 90px;
+    padding-top: 5px;
+}
+.사진5{
+    width: 120px;
+    height: 90px;
+    padding-top: 3px;
+}
+.사진6{
+    width: 160px;
+    height: 90px;
+}
+.사진{
+    width: 120px;
+    height: 90px;
+}
+
 .고른메뉴{
     border: solid 3px black;
     width: 560px;
     margin: 20px 20px 20px 20px;
     background-color: white;
     text-align: center;
+}
+.b1{
+    background-color: aliceblue;
+    border-radius: 10px;
 }
 .box2{
     border: solid 1px black;
@@ -97,3 +131,4 @@
     padding: 8px;
     border-bottom: 1px solid gray;
 }
+
