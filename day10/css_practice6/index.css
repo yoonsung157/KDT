@@ -1,9 +1,4 @@
-
-/* 전체 레이아웃 확인 => 추후에 완성후 제거 예정 */
-*{
-    border: 1px solid red;
-}
-
+/* header */
 #header {
     width: 1280px;
     margin: 0 auto;
@@ -22,11 +17,71 @@
     justify-content: end;
     margin: 10px 0px;
 }
-.main-menu > li > a{ font-size: 30px;}
+.top-menu > li{ margin-left: 10px;}
+.main-menu > li { 
+    margin-left: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
 #main {
     width: 1280px;
     margin: 0 auto;
 }
+
+/* ================ main ========================== */
+#main-img > img{ width: 100%; }  /* main-img */
+
+#main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.side-bar{ width: 250px; ;}
+.side-bar > h3{
+    background-color: #808080;
+    color: white;
+    padding: 10px;
+}
+.side-bar > ol > li {
+    padding: 10px;
+    border-bottom: 1px solid #eeeeee;
+}
+.content { width: 1000px;}
+.content > h3 {
+    font-size: 20px;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.content > img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* ====================== footer ======================== */
+
+#footer{
+    background-color: black;
+}
+#footer-content{
+    display: flex;
+    width: 1280px;
+    color: white;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 15px;
+}
+.left{
+    align-items: center;
+}
+.left > p {
+    font-size: 30px;
+}
+
+
+
+
+
 
 /* 자주 사용되는 기본css */
 *{
