@@ -8,7 +8,7 @@
 // [1] 사용법 
 // 1. 미리 만들어진 함수 : 라이브러리 , 각 프로그래밍 회사에서 제공
 console.log('함수')
-document.querySelector('body').innerHTML = '함수2'
+// document.querySelector('body').innerHTML = '함수2'
 // 2. 내가 만드는 함수 : 정의함수, 개발자(내가) 함수 직접 정의, *함수도 자료타입이다.
 // 1) function      2) 함수명      3)  (매개변수1, 매개변수2 )     4) ( 실행코드; )
 function func1( 매개변수1 ) {
@@ -47,3 +47,38 @@ function func4( x ) { console.log( 'func4 exe' ); y = x + 2; return y; }
 let result4 = func4( 10 )   // let result4 = x(10) + 2
 
 // 4. 매개변수 x , 반환값 o
+function func5( ) { console.log( 'func5 exe' ); y = 3 + 2; return y; }
+let result5 = func5( );     // let result5 = 5 ( 3 + 2 )
+// ====================================================================================================
+// 1. 지역변수 : if, for, function 문법 ( ) 에서 선언(let)된 변수, (선언) let a = 10    vs   (호출/수정) a = 20
+let 전역변수 = '대한민국' // 1) 해당 변수는 어떠한 ( ) 포함되는 선언이 아니므로 모든 곳에서 호출 가능
+if( true ) { 
+    let 지역변수1 = '경기도'  // 2) 해당 변수는 if( ) 에서 선언된 변수
+    console.log( 전역변수 );  // ( ) 밖으로 나가는 건 불가능 하지만 ( ) 안으로 들어가는 건 가능
+    for( let i = 1; i <= 1; i++ ) {
+        let 지역변수2 = '안양시'  // 3) 해당 변수는 for( )에서 선언된 변수
+
+        console.log( 지역변수1 ); // ( ) 밖 x, ( ) 안 o
+    } // for end
+    // console.log( 지역변수2 ) // 오류 : ( ) 밖 x
+    if( true ) {
+        let 지역변수3 = '성남시'
+        // console.log( 지역변수2 );  // 오류 : ( ) 밖 x
+    } // if end
+} // if end
+
+console.log( 전역변수 ) // 오류 x : 특정한 ( ) 선언이 아니므로 사용가능
+// console.log( 지역변수1 )  // 오류 : 지역변수1은 if( )에서 선언 했으므로 그 안에서만 사용가능
+
+// 2. 지역변수2 : if , for 와 다르게 function은 return 반환 키워드 이용한 지역변수의 값 이동
+function func6( ) {
+    let 지역변수4 = '수원시' ;
+    return 지역변수4;
+}
+let 전역변수2 = func6( );
+
+// 3. HTML에서 함수 호출 방법
+function func7( ) { console.log( 'func7 exe' ) }
+// 3-1 : JS에서 함수 호출 방법 : 함수명( 매개변수 )
+func7( )
+// 3-2 : HTML에서 함수 호출 방법 : <마크업 onClick="JS함수명()" />
