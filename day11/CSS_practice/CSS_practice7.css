@@ -1,0 +1,170 @@
+/* 자주 사용되는 기본css */
+*{
+    box-sizing: border-box;  /* content+padding 포함 사이즈 정의 */
+    padding: 0px; margin: 0px; /* 기본 여백 제거 */
+}
+a{
+    text-decoration: none;  /* 하이퍼링크 밑줄 제거 */
+    color: black; /* 하이퍼링크 색상 결정 */
+}
+li{ list-style-type: none;} /* li 항목 글머리 제거 */
+
+/* ==================================== */
+
+
+/* ============ header ============== */
+
+#header {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#left-header {
+    display: flex;
+}
+
+#red {
+    color: red;
+}
+#right-header {
+    margin-bottom: 30px;
+}
+#right-header > ol {
+    display: flex;
+}
+#right-header-top{
+    justify-content: end;
+    margin: 10px 0;
+}
+
+#right-header-bottom {
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: end;
+}
+#right-header-bottom > li {
+    margin-left: 90px;
+}
+/* =========== main-image ========== */
+
+#main-image > img {
+    width:100%;
+}
+/* =========== main ================ */
+
+#main{
+    width: 1280px;
+    display: flex;
+    margin: 0 auto;
+}
+
+/* ========== left-main ============ */
+#left-main{
+    width: 240px;
+}
+#left-main-top {
+    padding-top: 20px;
+}
+#left-main-top , #left-main-center {
+    border-bottom: solid 1px black;
+    padding-bottom: 30px;
+}
+
+#left-main-top > h2 , #left-main-top > p{
+    padding: 10px;
+}
+
+#left-main-top> h2 {
+    background-color: #0ba9a0;
+    color: white;
+}
+
+#left-main-top > input {
+    border-radius : 10px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+#left-main-center > h3 , #left-main-bottom > h3 {
+    border-bottom : solid 1px #c9c9c9;
+    padding: 10px;
+}
+
+
+#left-main-center > ol > li , #left-main-bottom > ol > li {
+    padding: 5px 10px;
+}
+
+/* =========== center-main ============= */
+#center-main{
+    width: 500px;
+    margin: 0 20px;
+}
+
+#center-main-top > h3 {
+    border-bottom: solid 1px black;
+    padding: 20px 0;
+    padding-bottom: 10px;
+}
+#center-main-top > li {
+    display: flex;
+    justify-content:space-between;
+    padding: 10px 0;
+}
+
+#center-main-bottom > h3 {
+    border-bottom: solid 1px black;
+    padding: 20px 0;
+    padding-bottom: 10px;
+}
+#center-main-bottom > li {
+    display: flex;
+    justify-content:space-between;
+    padding: 10px 0;
+}
+
+
+/* ============= right-main ============== */
+
+#right-main{
+    width: 500px;
+}
+
+#right-main-top{
+    margin: 20px 0;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+#right-main-bottom {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+#right-main-bottom > div {
+    margin: 0 30px 20px 0;
+}
+
+/* =============== footer ================= */
+
+#footer{
+    background-color: #06334f;
+    margin-top: 100px;
+}
+#footer-top , #footer-bottom {
+    width: 1280px;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+}
+#footer-top > li > a {
+    color:white;
+}
+#footer-top > li , #footer-bottom > div {
+    margin: 10px;
+}
+#footer-bottom {
+    justify-content:space-between;
+}
