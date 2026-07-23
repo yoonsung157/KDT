@@ -13,8 +13,8 @@ function getBoard() {
     for(let i = 0; i < boardList.length; i++){
         let obj = boardList[i]
         if(obj.no == selectNo){
-            document.querySelector('#title') = obj.title
-            document.querySelector('#content') = obj.content
+            document.querySelector('#title').innerHTML = obj.title
+            document.querySelector('#content').innerHTML = obj.content
             return;
         }
     }
