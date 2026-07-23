@@ -1,0 +1,84 @@
+h5{ color: rgba(108, 27, 247, 0.564); }
+/* CSS 주석 */
+/* (html)마크업에 스타일 적용 문법 */
+/*
+    선택자{ 속성명 : 속성값; 속성명 : 속성값 }
+    선택자 종류
+        1. * : 와일드카드(전체)
+        2. h4 : 특정 마크업명
+        3. .className : 특정 클래스명 지정 ( 복수 )
+        4. #id : 특정아이디명 지정         ( HTML 단일 )
+        ...
+
+    선택자 우선순위
+        만약에 동일한 속성이 중복이면 
+        * < 특정 마크업 < className < #id < 인라인
+        - 만일 동일한 수준이면 아래에 구성한 CSS 적용한다.
+        - <마크업 style="CSS문법"> 우선 적용한다.
+*/
+
+*{ color: skyblue; }
+h6{ color: aqua;}
+.구역1{ color: blueviolet;}
+#구역2{ color: black;}
+#구역2{ color: brown;}
+/* 자식선택자 : 상위선택자 > 자식선택자 */
+div > h3{ color: aquamarine;}
+
+/* 자손선택자 : 상위선택자 하위선택자 */
+div li{ background-color: azure;}
+
+/* 복수선택자 : 선택자 2개 이상 작성 */
+h3 , h4{ color: violet;}
+
+/* 다양한 선택자를 제공함으로써 중복을 방지 */
+html > body > div > ol > li{ }
+/* vs */
+#이름1 { }
+
+/* 누구를 { 무엇을 : 어떻게 ; } */
+/* 속성값 뒤로 ;(세미콜론) 닫는다(구분 */
+.title{
+    font-family: "궁서"; /* 글꼴 */
+    font-size: 17px;     /* 글자 크기 */
+    font-style: italic;  /* 글자 기울기 */
+    font-weight: 900;    /* 글자 진하게 */
+}
+/* 웹폰트 : 눈누/구글폰트 홈페이지에서 웹폰트 코드 복사해서 붙여넣기*/
+@font-face {
+    font-family: 'NoonnuBasicGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noon-2410@1.0/NoonnuBasicGothicRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+
+.content{
+    font-family: 'NoonnuBasicGothic';   /* 웹폰트 글꼴 */
+    color: rgba(137, 43, 226, 0.546);                /* 글자 색상 */
+    word-spacing: 10px;                 /* 단어간격(어간) */
+    letter-spacing: 10px;               /* 글자간격(자간) */
+    line-height: 150%;                  /* 줄간격, *백분위 */
+}
+
+.작성자{
+    text-align: center;                   /* 텍스트 가로 정렬 : left, center, right */
+    text-decoration: underline overline line-through;
+    /* underline : 밑줄, overline : 윗줄 line-through 취소선 */
+    text-shadow: 10px 5px 10px red;
+    /* x축 y축 흐림정도 색상 */
+    /* 색상 표현 방법 */
+    color : green;  /* 방법1 : 색상명 */
+    color : rgb(100,0,250 ); /* 방법2: R(레드)G(그린)B(블루) 0~255 조합 */
+    color : rgba(137, 43, 226, 0.546); /* a(알파) 투명도 */
+    color : #b489e4; /* 방법3 : 헥스코드 */
+}
+
+
+
+
+
+
+
+
+

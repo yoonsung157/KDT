@@ -1,0 +1,95 @@
+/* header */
+#header {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.top-menu{
+    display: flex;
+    justify-content: end;
+    margin: 10px 0px;
+}
+.main-menu{
+    display: flex;
+    justify-content: end;
+    margin: 10px 0px;
+}
+.top-menu > li{ margin-left: 10px;}
+.main-menu > li { 
+    margin-left: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+#main {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+/* ================ main ========================== */
+#main-img > img{ width: 100%; }  /* main-img */
+
+#main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.side-bar{ width: 250px; ;}
+.side-bar > h3{
+    background-color: #808080;
+    color: white;
+    padding: 10px;
+}
+.side-bar > ol > li {
+    padding: 10px;
+    border-bottom: 1px solid #eeeeee;
+}
+.content { width: 1000px;}
+.content > h3 {
+    font-size: 20px;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.content > img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* ====================== footer ======================== */
+
+#footer{
+    background-color: black;
+}
+#footer-content{
+    display: flex;
+    width: 1280px;
+    color: white;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 15px;
+}
+.left{
+    align-items: center;
+}
+.left > p {
+    font-size: 30px;
+}
+
+
+
+
+
+
+/* 자주 사용되는 기본css */
+*{
+    box-sizing: border-box;  /* content+padding 포함 사이즈 정의 */
+    padding: 0px; margin: 0px; /* 기본 여백 제거 */
+}
+a{
+    text-decoration: none;  /* 하이퍼링크 밑줄 제거 */
+    color: black; /* 하이퍼링크 색상 결정 */
+}
+li{ list-style-type: none;} /* li 항목 글머리 제거 */

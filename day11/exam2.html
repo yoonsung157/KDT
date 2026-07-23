@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <style>
+        .dark-mode{
+            background-color : black;
+            color : white;
+        }
+    </style>
+    <meta charset='utf-8'>
+</head>
+<body>
+    <!-- 1 -->
+    <h1 id="title"> </h1>
+
+    <!-- 2 -->
+    <input id="usernameInput">
+    <button id="submitBtn" onclick="namechange()">
+        확인
+    </button>
+    <p id="greeting"></p>
+
+    <!-- 3 -->
+    <div id="colorBox"> 색깔 </div>
+    <button id="styleBtn" onclick="stylechange()">
+        스타일 변경
+    </button>
+
+    <!-- 4 -->
+    <button id="themeBtn" onclick="darkmode()">
+        테마 변경
+    </button>
+
+    <!-- 5 -->
+    <div id="targetBox"> 박스 </div>
+    <button id="removeBtn" onclick="remove()">
+        박스삭제
+    </button>
+
+    <!-- 6 -->
+    <p class="item" > 요소1 </p>
+    <p class="item" > 요소2 </p>
+    <p class="item" > 요소3 </p>
+
+    <!-- 7 -->
+    <img id="mainImage" src="https://placehold.co/">
+    <button id="changeImgBtn" onclick="change()">
+        이미지 변경
+    </button>
+
+    <!-- 8 -->
+    <select id="fruits" onchange="change()">
+        <option> 사과 </option>
+        <option> 배 </option>
+        <option> 포도 </option>
+        <option> 귤 </option>
+    </select>
+
+    <!-- 9 -->
+    <input id="input">
+    <button onclick="a()">
+        입력
+    </button>
+
+    <script src="exam2.js"> </script>
+</body>
+</html>
