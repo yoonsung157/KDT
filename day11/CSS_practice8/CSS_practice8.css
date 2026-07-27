@@ -1,0 +1,124 @@
+/* 자주 사용되는 기본css */
+*{
+    box-sizing: border-box;  /* content+padding 포함 사이즈 정의 */
+    padding: 0px; margin: 0px; /* 기본 여백 제거 */
+}
+a{
+    text-decoration: none;  /* 하이퍼링크 밑줄 제거 */
+    color: black; /* 하이퍼링크 색상 결정 */
+}
+li{ list-style-type: none;} /* li 항목 글머리 제거 */
+
+/* ============ header ============== */
+
+#header {
+    width: 1280px;
+    margin: 20px auto;
+    display: flex;
+    justify-content:space-between;
+}
+
+#header > #left {
+    display: flex;
+    font-size: 25px;
+}
+
+#header > #left > #blue {
+    color: blue;
+    margin-right: 10px;
+}
+#header > #right {
+    align-content: center;
+}
+#header > #right > ol {
+    display: flex;
+}
+
+#header > #right > ol > li {
+    margin-left: 20px;
+}
+
+/* ========= main-image ========= */
+
+#main-image > img {
+    margin: 0 auto;
+    display: block;
+}
+
+/* ======== main ============== */
+
+#main {
+    width: 1280px;
+    display: flex;
+    margin: 50px auto;
+    justify-content:space-between;
+}
+#main > #left {
+    display: flex;
+}
+#main > #left > #left {
+    margin-right: 20px;
+}
+
+#main > #right {
+    display: flex;
+}
+#main > #right > #left {
+    margin-right: 20px;
+}
+
+/* ========== footer1 =========== */
+
+#footer1 {
+    background-color:#efefef;
+    padding: 30px;
+    margin: 10px 0;
+}
+#footer1 > #center {
+    display: flex;
+    width: 1280px;
+    margin: 0 auto;
+    justify-content:space-between;
+    margin-top:30px;
+}
+
+#footer1 img {
+    width: 280px;
+    height: 200px;
+}
+
+/* =========== footer2 =========== */
+
+#footer2 {
+    background-color: black;
+}
+
+#content {
+    color: white;
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:space-between;
+    padding: 50px 0;
+}
+#content h3 {
+    font-size:30px;
+}
+#content > #left > p {
+    font-size: 20px;
+}
+
+#content > #center > #top {
+    display: flex;
+    margin-bottom: 20px;
+}
+#content > #center > #top > li > a {
+    color:white;
+}
+
+#content > #right {
+    margin: 0 50px;
+}
+#content > #right img {
+    margin: 0 10px;
+}

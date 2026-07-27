@@ -1,0 +1,11 @@
+.a{
+    border: solid 1px black;
+    padding: 20px 10px;
+    margin: 0;
+}
+.활성{
+    color: green;
+}
+.만료{
+    color: red;
+}
