@@ -1,0 +1,50 @@
+#red {
+    background-color: red;
+    width: 700px;
+    height: 500px;
+}
+
+#red div {
+    background-color: yellow;
+    width: 100px;
+    height: 70px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+#box1 {
+    position: absolute;
+    top: 50px;
+    left: 300px;
+}
+
+#box2 {
+    position: absolute;
+    top: 130px;
+    left: 150px;
+}
+
+#box3 {
+    position: absolute;
+    top: 130px;
+    right: 210px;
+}
+
+#box4 {
+    position: absolute;
+    top: 280px;
+    left: 150px;
+}
+
+#box5 {
+    position: absolute;
+    top: 280px;
+    right: 210px;
+}
+
+#box6 {
+    position: absolute;
+    top: 380px;
+    left: 300px;
+}

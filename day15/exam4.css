@@ -1,0 +1,26 @@
+.box {
+    border: 1px solid red;
+}
+.back1{
+    background-color: blue;
+    background-color: rgb(0, 0, 255);
+    background-color: rgba(0, 0, 255, 0.5);
+    background-color: #0000ff;
+}
+.back2{
+    /* CSS에서 요소에 배경 이미지 넣기 */
+    background-image: url("너구리.jpg"); /* 배경 이미지 */
+    background-repeat: no-repeat; /* 채우기 없음 */
+    background-position: left top; /* left right center top bottom */
+}
+
+.back3 {
+    background-image: url('패턴.jpg');
+    background-repeat: repeat; /* (기본값) 채우기 */
+}
+
+.back4 {
+    background-image: url('너구리.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* 디바이스/브라우저 크기만큼 전체 크기 */
+}
