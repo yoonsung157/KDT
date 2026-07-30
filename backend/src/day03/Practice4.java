@@ -228,6 +228,6 @@ public class Practice4 {
 
         // if ( a == b ) { System.out.println("무승부"); }
         // else if ( a == 0 && b == 2 || a == 1 && b == 0 || a == 2 && b == 1) {System.out.println("플레이어1 승리");}
-        // else {System.out.println("플레이어2 승리");}
+        // else {System.out.println("플레이어2 승리");} .
     }
 }
