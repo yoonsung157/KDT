@@ -166,7 +166,9 @@ public class Practice3 {
         출력 예시:
         BMI 지수: 22.34... */
 
-        
+        // System.out.print("키: "); double height = scan.nextDouble();        
+        // System.out.print("몸무게: "); double a = scan.nextDouble();
+        // System.out.println(a / (height/100.0 * height/100.0));
 
         /*[문제 14] Scanner를 이용해 아이디와 이메일을 String으로 입력받습니다. 아이디가 "admin"이거나 또는 이메일이 "admin@test.com"이면 "관리자", 그렇지 않으면 "일반 사용자"를 출력하시오.
         입력 예시:
@@ -175,6 +177,9 @@ public class Practice3 {
         출력 예시:
         결과: 관리자 */
 
+        // System.out.print("아이디: "); String id = scan.next();
+        // System.out.print("이메일: "); String email = scan.next();
+        // System.out.println(id.equals("admin") ? "관리자" : email.equals("admin@test.com") ? "관리자" : "일반사용자");
         /*[문제 15] Scanner를 이용해 100점 만점의 점수(int)를 입력받아, 점수에 따라 아래와 같이 등급을 부여하고 출력하시오.
         90점 이상: 'A'
         80점 이상 90점 미만: 'B'
@@ -184,11 +189,16 @@ public class Practice3 {
         출력 예시:
         등급:B */
 
+        // System.out.print("점수 입력"); int a = scan.nextInt();
+        // System.out.println(a >= 90 ? 'A' : a >= 80 ? 'B' : 'C');
+
         /*[문제 16] Scanner를 이용해 나이(int)를 입력받아, 20대(20세 이상 29세 이하)에 해당하는 경우 "이벤트 대상입니다."를, 그렇지 않으면 "이벤트 대상이 아닙니다."를 출력하시오.
         입력 예시:
         나이를 입력하세요: 25
         출력 예시:
         이벤트 대상입니다. */
 
-            }
+        // System.out.print("나이: "); int year = scan.nextInt();
+        // System.out.println(year >= 20 && year <= 29 ? "이벤트 대상입니다." : "아닙니다.");
+    }
 }
