@@ -1,4 +1,14 @@
-
+/* 자주 사용되는 기본css */
+*{
+    box-sizing: border-box;  /* content+padding 포함 사이즈 정의 */
+    padding: 0px; margin: 0px; /* 기본 여백 제거 */
+}
+a{
+    text-decoration: none;  /* 하이퍼링크 밑줄 제거 */
+    color: black; /* 하이퍼링크 색상 결정 */
+}
+li{ list-style-type: none;} /* li 항목 글머리 제거 */
+/* ===================== */
 #wrap {
     width: 650px;
     height: 500px;
@@ -8,21 +18,30 @@
 
 #box1 {
     position: relative;
-    top: 90%;
-    left: 90%;
+    top: 85%;
+    left: 85%;
     font-weight: bold;
     font-size: 30px;
     background-color: black;
     color: white;
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     text-align: center;
     border-radius: 100%;
 }
 
 #sub { 
-    position: absolute;
-    display: none;
+    color: white;
+    position:absolute;
+    bottom: 150%;
+    width: 50px;
+}
+#sub li {
+    border-radius: 100%;
 }
 
-#wrap > #box1:hover + #sub{ display: block; }
+#box2 {
+    background-color: blue;
+}
+
+#wrap > #box1:hover #sub{ display: block; }
