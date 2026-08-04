@@ -28,13 +28,17 @@ li{ list-style-type: none;} /* li 항목 글머리 제거 */
     height: 75px;
     text-align: center;
     border-radius: 100%;
+    line-height: 70px;
 }
 
 #sub { 
     color: white;
     position:absolute;
-    bottom: 150%;
+    left: 8%;
+    bottom: 100%;
     width: 50px;
+    display: none;
+    font-size: 20px;
 }
 #sub li {
     border-radius: 100%;
@@ -44,4 +48,24 @@ li{ list-style-type: none;} /* li 항목 글머리 제거 */
     background-color: blue;
 }
 
+#box3 {
+    background-color: green;
+}
+
+#box4 {
+    background-color: orange;
+}
+
+#box5 {
+    background-color: purple;
+}
+
 #wrap > #box1:hover #sub{ display: block; }
+
+#sub ul li {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 55px;
+    margin-bottom: 10px;
+}
