@@ -12,21 +12,27 @@ public class ListController {
     // dao 싱글톤 호출
     private ListDao ld = ListDao.getInstance();
 
-    // 게시물 작성 컨트롤러
+    // 대기명단 작성 컨트롤러
     public boolean save( ListDto listDto ){
         boolean result = ld.save( listDto );
         return result;
     }
 
-    // 게시물 전체 조회 컨트롤러
+    // 대기명단 전체 조회 컨트롤러
     public ArrayList<ListDto> findAll( ){
         ArrayList<ListDto> result = ld.findAll();
         return result;
     }
 
-    // 게시물 개별 수정 컨트롤러
+    // 대기명단 개별 수정 컨트롤러
    public boolean edit( ListDto listDto ){
         boolean result = ld.edit( listDto );
+        return result;
+    }
+
+    // 대기명단 개별 삭제 컨트롤러
+   public boolean delete( String number ){
+        boolean result = ld.delete( number );
         return result;
     }
 }
