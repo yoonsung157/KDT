@@ -64,3 +64,26 @@ INSERT INTO orders VALUES(NULL, 1010, '김민준', 1, '2023-07-03');
 INSERT INTO orders VALUES(NULL, 1004, '최수아', 2, '2023-07-10');
 
 show tables;
+
+DESCRIBE books;
+select * from books;
+
+-- [문제 1] 
+insert into books values(1012, 'MySQL 실습', '김민수', '컴퓨터', 17000, 25, '2023-03-01');
+
+-- [문제 2]
+insert into books values(1013,'데이터베이스 개론', '이영희', '컴퓨터', 22000, NULL, '2022-09-10');
+
+select * from orders;
+-- [문제 3]
+insert into orders(book_id, customer, order_qty, order_date) values (1002, '최지훈', 1, '2023-08-15');
+-- [문제 4]
+update books set price = 15000 where book_id = 1004;
+-- [문제 5]
+update books set price = price + 2000 where genre = '소설';
+-- [문제 6]
+update books set stock = 0 where stock is NULL;
+-- [문제 7]
+delete from orders where customer = '이서연';
+-- [문제 8]
+delete from books where stock <= 0;
