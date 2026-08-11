@@ -87,3 +87,27 @@ update books set stock = 0 where stock is NULL;
 delete from orders where customer = '이서연';
 -- [문제 8]
 delete from books where stock <= 0;
+-- [문제 9]
+delete from orders where order_qty >= 3;
+-- [문제 10]
+select * from books;
+-- [문제 11]
+select title, price from books;
+-- [문제 12]
+select title, price from books where price > 20000;
+-- [문제 13]
+select title, price, stock from books where price >= 15000 and stock >= 10;
+-- [문제 14]
+select title, genre from books where genre in ('컴퓨터', '경제');
+-- [문제 15]
+select * from books where not genre = '소설';
+-- [문제 16]
+select title, stock from books where stock is NULL;
+-- [문제 17]
+select title, stock from books where stock is not null;
+-- [문제 18]
+select title, price from books where price between 14000 and 18000;
+-- [문제 19]
+select title, author from books where title like "%자%";
+-- [문제 20]
+select title, author from books where author like "김__";
