@@ -27,13 +27,73 @@ public class Practice13 {
 
         // [문제 5]
         Object duck2 = new Duck();
-        if( duck2 instanceof Flyable ) { duck2 = (Flyable)duck2; }
-        else if( duck2 instanceof Swimmable ) { duck2 = (Swimmable)duck2; }
-        
-        duck2
+        if( duck2 instanceof Flyable ) {( (Flyable)duck2 ).fly();}
+        else if( duck2 instanceof Swimmable ) {( (Swimmable)duck2 ).swim(); }
+
+        // [문제 6]
+        DataAccessObject dao = new OracleDao();
+        dao.save();
+        dao = new MySqlDao();
+        dao.save();
+
+        // [문제 7]
+        Greeting g = new Greeting() {
+            public void welcome() { System.out.println("환영합니다."); }
+        };
+        g.welcome();
+
+        // [문제 8]
+        Television t1 = new Television();
+        t1.turnOff(); t1.turnOn(); t1.setMute(false);
+
+        // [문제 9]
+        Calculator c1 = new Calculator() {
+            public int plus(int x, int y) {
+                return x + y;
+            }
+        };
+
+        System.out.println(c1.plus(10,20) );
 
     } // main end
 } // class end
+
+interface Calculator {
+    int plus(int x, int y);
+}
+
+class Television implements Device {
+    @Override
+    public void turnOn() { System.out.println("켬");}
+
+    @Override
+    public void turnOff() { System.out.println("끔"); }
+
+}
+
+interface Device {
+    public default void setMute(boolean mute) { System.out.println("무음 처리합니다.");}
+    void turnOn();
+    void turnOff();
+}
+
+interface Greeting {
+    void welcome();
+}
+
+class MySqlDao implements DataAccessObject {
+    @Override
+    public void save() { System.out.println("MySQL DB에 저장");}
+}
+
+class OracleDao implements DataAccessObject {
+    @Override
+    public void save() { System.out.println("Oracle DB에 저장"); }
+}
+
+interface DataAccessObject {
+    void save();
+}
 
 interface Flyable {
     void fly();
