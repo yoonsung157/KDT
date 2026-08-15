@@ -1,0 +1,12 @@
+CREATE DATABASE my_db;
+
+SHOW DATABASES;
+
+USE my_db;
+
+DROP DATABASE my_db;
+
+DROP DATABASE IF EXISTS company_db;
+
+CREATE DATABASE company_db;
+USE company_db;
