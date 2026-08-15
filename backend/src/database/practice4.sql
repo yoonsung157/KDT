@@ -134,3 +134,20 @@ select count(*) from orders;
 select sum(order_qty) from orders;
 -- [문제 7]
 select avg(price) from books;
+-- [문제 8]
+select max(price) from books;
+select min(price) from books;
+--[문제 9]
+select count(stock) from books where stock is not null;
+--[문제 10]
+select customer, count(customer) from orders group by customer;
+--[문제 11]
+select book_id, sum(order_qty) from orders group by book_id;
+--[문제 12]
+select customer, sum(order_qty) from orders group by customer having sum(order_qty) >= 5;
+--[문제 13]
+select book_id, count(order_qty) from orders group by book_id having count(order_qty) >= 3;
+--[문제 14]
+select price from books order by price desc;
+--[문제 15]
+select price from books order by price Limit 3;
