@@ -1,11 +1,9 @@
 package day13;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.Scanner;
 
-public class asfd {
+public class Practice14 {
     public static void main(String[] args) {
         String carParkingList = "3,211가6231,202608190930\n8,452하1234,202608171227";
         Scanner scan = new Scanner(System.in);
