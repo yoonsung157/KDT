@@ -52,6 +52,6 @@ public class Exam2 {
 
         // 입고날짜.getDayOfYear() + 60 > 현재날짜.getDayOfYear() ? ㄱㅊ : 유통기한 지남
 
-
+        System.out.println( localDate );
     }
 }
