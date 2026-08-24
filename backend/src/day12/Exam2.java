@@ -5,12 +5,15 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Exam2 {
     public static void main(String[] args) {
         // JDBC 란 ? 자바 와 데이터베이스 연동 제공하는 인터페이스
         // [준비] 프로젝트내 lib 폴더에 'mysql-connector-j-26.7.0.jar' 파일 저장한다.
         // [연동]
+        String a = "김철수";
         try{
             // [1] MYSQL 회사에서 제공하는 Driver 구현체 (동적) 로드 *예외처리 필수*
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -24,8 +27,19 @@ public class Exam2 {
 
             // [3] 연동된 데이터베이스 내 DML(insert,select,update,delete) 조작 
             // 1. insert 하기 , insert into 테이블명( 필드명 )values(값)
-            String sql = "insert into test( name ) values( '유재석' ) "; // 자바 문자열에 SQL 작성(자동완성 안된다.)
-            PreparedStatement ps = conn.prepareStatement( sql ); 
+            
+            
+            System.out.print("날짜");
+            Scanner scan = new Scanner(System.in);
+
+            String aa = scan.next();
+            LocalDate bb = LocalDate.parse(aa);
+            System.out.println(bb);
+
+            String sql = "insert into test( name, bbb ) values( '윤성', ? ) "; // 자바 문자열에 SQL 작성(자동완성 안된다.)
+            PreparedStatement ps = conn.prepareStatement( sql );
+            ps.setObject(1, bb);
+
             // conn(연동된인터페이스).prepareStatement( 기재할SQL );   , 기재된 인터페이스 반환
             // PreparedStatement( SQL기재된 인터페이스 ) 
             int result = ps.executeUpdate(); // ps.executeUpdate(), ( SQL기재된 인터페이스에서 SQL 실행 ), 실행한 레코드수 반환 
