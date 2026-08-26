@@ -36,9 +36,13 @@ public class Exam2 {
             LocalDate bb = LocalDate.parse(aa);
             System.out.println(bb);
 
-            String sql = "insert into test( name, bbb ) values( '윤성', ? ) "; // 자바 문자열에 SQL 작성(자동완성 안된다.)
+            String ww = "윤성";
+
+            String sql = "insert into test( name, bbb ) values( ?, ? ) "; // 자바 문자열에 SQL 작성(자동완성 안된다.)
             PreparedStatement ps = conn.prepareStatement( sql );
-            ps.setObject(1, bb);
+            ps.setString(1, ww);
+            ps.setObject(2, bb);
+            
 
             // conn(연동된인터페이스).prepareStatement( 기재할SQL );   , 기재된 인터페이스 반환
             // PreparedStatement( SQL기재된 인터페이스 ) 
