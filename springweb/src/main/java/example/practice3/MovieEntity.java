@@ -1,5 +1,7 @@
 package example.practice3;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,5 +30,7 @@ public class MovieEntity
         private String director;
         @Column( nullable = false)
         private double rating;
+        @Column( nullable = false)
+        private LocalDate releasedate;
     
 }

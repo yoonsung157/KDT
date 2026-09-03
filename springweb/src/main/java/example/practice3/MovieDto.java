@@ -1,8 +1,8 @@
 package example.practice3;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import example.day05.TestEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -18,6 +18,7 @@ public class MovieDto {
     private String title;
     private String director;
     private double rating;
+    private LocalDate releasedate;
     private LocalDateTime createDate;
     private LocalDateTime updateDate;
 
@@ -26,6 +27,7 @@ public class MovieDto {
         .title( this.title )
         .director( this.director )
         .rating( this.rating )
+        .releasedate(this.releasedate)
         .build();
     }
 
@@ -35,6 +37,7 @@ public class MovieDto {
         .title( movieEntity.getTitle() )
         .director( movieEntity.getDirector() )
         .rating( movieEntity.getRating() )
+        .releasedate( movieEntity.getReleasedate() )
         .createDate( movieEntity.getCreateDate() )
         .updateDate( movieEntity.getUpdateDate() )
         .build();
