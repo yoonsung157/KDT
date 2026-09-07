@@ -1,4 +1,4 @@
-package example.practice4;
+package example.Mini2;
 
 import java.time.LocalDateTime;
 
@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @EntityListeners(AuditingEntityListener.class)
 public class BaseTime {
     @CreatedDate
-    private LocalDateTime createdAt;
+    private LocalDateTime createDate;
     @LastModifiedDate
-    private LocalDateTime updatedAt;
+    private LocalDateTime updateDate;
 }
