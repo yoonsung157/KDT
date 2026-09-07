@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -54,4 +55,9 @@ public class MovieController {
     }
 
     // 5. 삭제
+    @DeleteMapping
+    public boolean Delete(@RequestParam (name = "movieid") int movieid) {
+
+        return movieService.Delete( movieid );
+    }
 }

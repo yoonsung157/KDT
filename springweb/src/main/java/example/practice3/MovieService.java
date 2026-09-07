@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 
 @Service
@@ -43,10 +44,24 @@ public class MovieService {
 
     // 4. 수정
 
+    @Transactional
     public boolean Update( MovieDto movieDto ){
         MovieEntity movieEntity = movieDto.toEntity();
-        movieRepository.findById( movieDto.getMovieid() );
+        Optional<MovieEntity> optional = movieRepository.findById( movieDto.getMovieid() );
+        if(optional.isPresent() ) {
+            MovieEntity savedEntity = optional.get();
+            savedEntity.setDirector(movieEntity.getDirector());
+            savedEntity.setRating(movieEntity.getRating());
+            savedEntity.setReleasedate(movieEntity.getReleasedate());
+            savedEntity.setTitle(movieEntity.getTitle());
+            return true;
+        }
+        return false;
     }
 
     // 5. 삭제
+    public boolean Delete( int movieid ) {
+        movieRepository.deleteById(movieid);
+        return true;
+    }
 }
