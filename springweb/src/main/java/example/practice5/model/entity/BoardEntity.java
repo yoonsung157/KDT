@@ -1,4 +1,4 @@
-package example.practice4.model.entity;
+package example.practice5.model.entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,17 +17,18 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity 
-@Table (name="student")
+@Table ( name = "board")
 @NoArgsConstructor @AllArgsConstructor @Builder @Data 
-public class StudentEntity extends BaseTime{
+public class BoardEntity extends BaseTime {
     @Id 
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Integer studentId;
-    private String studentName;
-
-    
-    @OneToMany(mappedBy = "studentEntity", cascade = CascadeType.ALL, orphanRemoval = true)
-    @ToString.Exclude
+    @GeneratedValue ( strategy = GenerationType.IDENTITY )
+    private Integer id;
+    private String author;
+    private String password;
+    private String content;
+    // 양방향   
+    @OneToMany ( mappedBy = "boardEntity" , cascade = CascadeType.ALL ) // 1:M , 자바에서 매핑할 FK멤버변수명
+    @ToString.Exclude 
     @Builder.Default
-    private List<EnrollEntity> enrollList = new ArrayList<>();
+    private List<CommentEntity> commentEntities = new ArrayList<>();
 }
