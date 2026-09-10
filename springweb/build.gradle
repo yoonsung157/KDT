@@ -36,3 +36,29 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+// Build and run only the practice5_1 exercise.
+def practice51Compile = tasks.register('compilePractice51', JavaCompile) {
+    source = fileTree('src/main/java') {
+        include 'example/practice5_1/**/*.java'
+    }
+    classpath = configurations.compileClasspath
+    options.annotationProcessorPath = configurations.annotationProcessor
+    options.encoding = 'UTF-8'
+    javaCompiler = javaToolchains.compilerFor {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+    destinationDirectory = layout.buildDirectory.dir('classes/practice51')
+}
+
+tasks.register('runPractice51', JavaExec) {
+    group = 'application'
+    description = 'Compile and run only example.practice5_1.AppStart'
+    dependsOn practice51Compile
+    mainClass = 'example.practice5_1.AppStart'
+    classpath = files(practice51Compile.flatMap { it.destinationDirectory }, 'src/main/resources') + configurations.runtimeClasspath
+    javaLauncher = javaToolchains.launcherFor {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+    standardInput = System.in
+}

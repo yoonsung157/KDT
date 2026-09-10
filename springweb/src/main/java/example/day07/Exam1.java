@@ -20,7 +20,7 @@ public class Exam1 {
 }
 
 class TestService {
-    private TestService(){}
+    TestService(){}
     private static final TestService instance = new TestService();
     public static TestService getInstance(){ return instance; }
 
