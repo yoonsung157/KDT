@@ -62,3 +62,6 @@ tasks.register('runPractice51', JavaExec) {
     }
     standardInput = System.in
 }
+
+// Keep generated build files outside the OneDrive-synced project folder.
+layout.buildDirectory.set(file("${System.getProperty('user.home')}/Documents/Codex/build-cache/KDT/springweb"))
