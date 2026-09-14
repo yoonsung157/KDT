@@ -14,29 +14,28 @@ import lombok.NoArgsConstructor;
 public class BoardDto {
     private Integer id;
     private String author;
-    private String password;
     private String content;
-    
+    private String password;
+
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-
     @Builder.Default
     private List<CommentDto> comments = new ArrayList<>();
 
     public BoardEntity toEntity() {
         return BoardEntity.builder()
         .author(this.author)
-        .password(this.password)
         .content(this.content)
+        .password(this.password)
         .build();
     }
 
-    public static BoardDto from( BoardEntity entity ) {
+    public static BoardDto from(BoardEntity entity){
         return BoardDto.builder()
         .id(entity.getId() )
         .author(entity.getAuthor() )
-        .password(entity.getPassword() )
         .content(entity.getContent() )
+        .password(entity.getPassword() )
         .createdAt(entity.getCreatedAt() )
         .updatedAt(entity.getUpdatedAt() )
         .build();

@@ -21,14 +21,16 @@ import lombok.ToString;
 @NoArgsConstructor @AllArgsConstructor @Builder @Data 
 public class BoardEntity extends BaseTime {
     @Id 
-    @GeneratedValue ( strategy = GenerationType.IDENTITY)
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Integer id;
     private String author;
-    private String password;
     private String content;
+    private String password;
 
-    @OneToMany ( mappedBy = "boardEntity" , cascade = CascadeType.ALL)
+    @OneToMany (mappedBy = "boardEntity", cascade = CascadeType.ALL)
     @ToString.Exclude
     @Builder.Default
     private List<CommentEntity> commentEntities = new ArrayList<>();
+
+
 }

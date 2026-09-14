@@ -16,12 +16,12 @@ public class CommentService {
     private final BoardRepository boardRepository;
 
     // 1. 댓글 등록
-    public boolean save( CommentDto commentDto) {
+    public boolean save( CommentDto commentDto ) {
         CommentEntity commentEntity = commentDto.toEntity();
-        BoardEntity boardEntity = boardRepository.findById( commentDto.getBoardId() ).orElse(null);
+        BoardEntity boardEntity = boardRepository.findById(commentDto.getBoardId()).orElse(null);
         commentEntity.setBoardEntity(boardEntity);
         CommentEntity savedEntity = commentRepository.save(commentEntity);
-        if( savedEntity.getId() >= 1 ) return true;
+        if(savedEntity.getId() >= 1 ) return true;
         return false;
     }
 

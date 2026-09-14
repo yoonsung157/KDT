@@ -24,18 +24,18 @@ public class BoardService {
     }
 
     // 2. 게시물 전체 조회
-    public List<BoardDto> findAll( ){
-        List<BoardEntity> boardEntities = boardRepository.findAll(); 
+    public List<BoardDto> findAll() {
+        List<BoardEntity> boardEntities = boardRepository.findAll();
         List<BoardDto> boardDtos = new ArrayList<>();
-        boardEntities.forEach( (boardEntity) -> {   
-            BoardDto boardDto = BoardDto.from(boardEntity); 
-            boardEntity.getCommentEntities().forEach((commentEntity) -> { // ** 달린 댓글 포함 **
-                CommentDto commentDto = CommentDto.from( commentEntity );
+        boardEntities.forEach(boardentity -> {
+            BoardDto boardDto = BoardDto.from(boardentity);
+            boardentity.getCommentEntities().forEach(commententity -> {
+                CommentDto commentDto = CommentDto.from(commententity);
                 boardDto.getComments().add(commentDto);
             });
             boardDtos.add(boardDto);
         });
-        return boardDtos; 
+        return boardDtos;
     }
 
     // 3

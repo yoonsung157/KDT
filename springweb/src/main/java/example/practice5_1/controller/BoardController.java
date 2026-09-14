@@ -1,18 +1,19 @@
 package example.practice5_1.controller;
 
-import java.util.List;
-
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import example.practice5_1.model.dto.BoardDto;
 import example.practice5_1.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.List;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 
@@ -24,7 +25,7 @@ public class BoardController {
     // 등록
     @PostMapping("")
     public boolean save(@RequestBody BoardDto boardDto) {
-        return boardService.save( boardDto );
+        return boardService.save(boardDto);
     }
 
     // 조회
@@ -35,9 +36,10 @@ public class BoardController {
 
     // 삭제
     @DeleteMapping ("")
-    public boolean delete( 
+    public boolean delete(
         @RequestParam (name = "id") Integer id,
         @RequestParam (name = "password") String password ) {
             return boardService.delete(id, password);
         }
+    
 }

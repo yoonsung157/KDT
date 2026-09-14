@@ -15,15 +15,15 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
-@RestController @RequestMapping ("/api/board/comment")
+@RestController @RequestMapping ("/api/board/comments")
 @RequiredArgsConstructor 
 public class CommentController {
     private final CommentService commentService;
 
-    // 등록
+    // 등록 
     @PostMapping("")
-    public boolean save( @RequestBody CommentDto commentDto ) {
-        return commentService.save( commentDto );
+    public boolean save(@RequestBody CommentDto commentDto) {
+        return commentService.save(commentDto);
     }
 
     // 삭제
