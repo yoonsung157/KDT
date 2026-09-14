@@ -35,4 +35,13 @@ public class ReviewService {
 
     return false;
     }
+
+    public boolean delete(Integer rno) {
+        ReviewEntity reviewEntity = reviewRepository.findById(rno).orElse(null);
+        if( reviewEntity != null ) {
+            reviewRepository.deleteById(rno);
+            return true;
+        }
+        return false;
+    }
 }

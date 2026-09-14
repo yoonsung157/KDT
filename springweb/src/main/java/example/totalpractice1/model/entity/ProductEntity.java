@@ -29,7 +29,7 @@ public class ProductEntity {
     private Integer price;
     
     @JoinColumn(name="cno")
-    @ManyToOne 
+    @ManyToOne
     private CategoryEntity categoryEntity;
 
     @OneToMany (mappedBy = "productEntity" , cascade = CascadeType.ALL)
