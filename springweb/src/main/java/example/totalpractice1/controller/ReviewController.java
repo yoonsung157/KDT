@@ -16,7 +16,7 @@ import example.totalpractice1.model.dto.ReviewDto;
 import example.totalpractice1.service.ReviewService;
 
 @RestController
-@RequestMapping("/api/reviews")
+@RequestMapping("/api/reviews") @CrossOrigin (value = "http://localhost:5173")
 
 public class ReviewController {
     @Autowired private ReviewService reviewService;
