@@ -31,6 +31,15 @@ dependencies {
 
 	// 4. JPA
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // 5. HTTP 통신
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    
+    // 6. XML 파싱
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.22.2'
+
+    // 7. CSV 파싱
+    implementation 'com.opencsv:opencsv:5.12.0'
 }
 
 tasks.named('test') {
@@ -63,5 +72,3 @@ tasks.register('runPractice51', JavaExec) {
     standardInput = System.in
 }
 
-// Keep generated build files outside the OneDrive-synced project folder.
-layout.buildDirectory.set(file("${System.getProperty('user.home')}/Documents/Codex/build-cache/KDT/springweb"))
