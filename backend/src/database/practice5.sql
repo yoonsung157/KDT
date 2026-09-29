@@ -55,7 +55,19 @@ select 제품명 from pcategory c, product p
 where 카테고리번호_pk = 카테고리번호_fk;
 SELECT * FROM table1 t1 , table2 t2 WHERE t1.num_pk = t2.num_fk;
 -- [문제 7] 재고가 한 번도 등록되지 않은 제품의 제품명을 조회하세요.
-
+select p.제품명
+from product p
+left join stock s on p.제품번호_pk = s.제품번호_fk
+where s.재고번호_pk is null;
 -- [문제 8] 각 카테고리별로 총 재고 수량의 합계를 카테고리명과 함께 조회하세요. 
-
+select c.카테고리명, coalesce(sum(s.재고수량), 0) as 총재고수량
+from pcategory c
+left join product p on c.카테고리번호_pk = p.카테고리번호_fk
+left join stock s on p.제품번호_pk = s.제품번호_fk
+group by c.카테고리번호_pk, c.카테고리명;
 -- [문제 9] 각 제품별로 총 재고 수량을 조회하고, 총 재고 수량이 많은 순서대로 정렬하여 제품명과 총재고수량을 표시하세요.
+select p.제품명, coalesce(sum(s.재고수량), 0) as 총재고수량
+from product p
+left join stock s on p.제품번호_pk = s.제품번호_fk
+group by p.제품번호_pk, p.제품명
+order by 총재고수량 desc;
