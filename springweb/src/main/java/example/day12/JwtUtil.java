@@ -26,12 +26,24 @@ public class JwtUtil {
         this.secretKey = Keys.hmacShaKeyFor( key.getBytes( StandardCharsets.UTF_8));
     }
 
-    // [1] JWT 토큰 생성 메소드
-    public String createToken( Long mno ) {
+    // [3] JWT Refresh 토큰 생성 메소드
+    public String createRefreshToekn( Long mno ) {
+        return Jwts.builder() // 토큰 생성 시작
+                .claim("type", "REFRESH")
+                .subject( mno+"")
+                .issuedAt( new Date() )
+                .expiration( new Date( new Date().getTime()+ 1000L * 60 * 60 * 24 * 7)) // 엑세스 토큰보다 만료기간 길게
+                .signWith(secretKey)
+                .compact(); // 생성된 토큰 문자열 반환
+    }
+
+    // [1] JWT ACCSESS토큰 생성 메소드
+    public String createAccToken( Long mno ) {
         String jwt = Jwts.builder()
+                    .claim("type", "ACCESS")
                     .subject( mno+"") // 토큰에 들어갈 내용들
                     .issuedAt( new Date() ) // 토큰 생성 시간
-                    .expiration( new Date( new Date().getTime() + 60 * 60) ) // 토큰 만료 시간
+                    .expiration( new Date( new Date().getTime() + 1000L * 60 * 30) ) // 토큰 만료 시간
                     .signWith(secretKey)
                     .compact();
 
@@ -52,5 +64,7 @@ public class JwtUtil {
         } catch(Exception e ) {
             return null;
         }
-    } 
+    }
+    
+    // [3]
 }
