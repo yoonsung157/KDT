@@ -51,6 +51,9 @@ dependencies {
 
     // 10. radis
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+    // 11. websocket
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
 }
 
 tasks.named('test') {
