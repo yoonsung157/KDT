@@ -54,6 +54,10 @@ dependencies {
 
     // 11. websocket
     implementation 'org.springframework.boot:spring-boot-starter-websocket'
+
+    // 12. 웹 크롤링
+    implementation 'org.jsoup:jsoup:1.23.1' // jsoup (동적 페이지)
+    implementation 'com.microsoft.playwright:playwright:1.63.0' // playwright (정적 페이지)
 }
 
 tasks.named('test') {
